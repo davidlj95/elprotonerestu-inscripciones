@@ -539,6 +539,11 @@ var JotForm = {
                             }
                         }, 500);
                     }
+                } else {
+                    // Remove smart embed class to prevent applying embed styling
+                    $$('.isSmartEmbed').each(function(el) {
+                        el.removeClassName('isSmartEmbed');
+                    });
                 }
 
                 // set triggerEvent function for elements
